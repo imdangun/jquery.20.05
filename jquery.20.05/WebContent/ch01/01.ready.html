@@ -5,7 +5,7 @@ jQuery(document).ready(() => $('body').append('<p>one</p>'));
 
 $(document).ready(() => $('body').append('<p>two</p>'));
 
-readyFn = () => $('body').append('<p>three</p>');
+let readyFn = () => $('body').append('<p>three</p>');
 $(document).ready(readyFn);
 
 $(() => $('body').append('<p>four</p>'));
