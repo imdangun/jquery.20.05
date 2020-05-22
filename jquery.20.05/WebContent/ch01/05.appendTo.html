@@ -1,0 +1,28 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => $('div').appendTo('hr'));
+</script>
+<style>
+div {
+	background-color: orange;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+hr {
+	border: 1px solid black;
+}
+</style>
+
+<div></div>
+<div></div>
+<hr>
+<hr>
+
+<!-- 
+- .appendTo(target):
+  Insert every element in the set of matched elements 
+  to the end of the target.
+-->

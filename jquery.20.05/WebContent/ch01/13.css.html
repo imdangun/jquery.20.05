@@ -1,0 +1,27 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	console.log($('h1').css('font-size')); // 32px
+	
+	$('h1.big').css('font-size', '100px');
+	
+	$('h1.red').css({
+		'font-size': '50px',
+		color: 'red'
+	});	
+});
+</script>
+
+<h1>HELLO</h1>
+<h1 class='big'>WORLD</h1>
+<h1 class='red'>JAVA</h1>
+
+<!-- 
+- .css(propertyName):
+  Get the computed style properties for the first element 
+  in the set of matched elements.
+  
+- .css(propertyName, value):
+  Set one or more CSS properties for the set of matched elements.
+-->

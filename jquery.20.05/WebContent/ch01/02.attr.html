@@ -2,41 +2,21 @@
 <script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
 <script>
 $(() => {
-	console.log($("a").attr("href")); //a.html
+	console.log($('a').attr('href')); // https://www.google.co.kr/
 	
-	$("a").attr("href", "c.html");
-	console.log($("a").eq(0).attr("href")); //c.html
-	console.log($("a").eq(1).attr("href")); //c.html
-	
-	$("a").attr({
-		title: "hello",
-		href:  "d.html"
-	});	
-	console.log($("a").attr("href")); //d.html
-	
-	$("a").attr("href", function(idx, href){
-		return "/new/" + href;
+	$('a').attr('href', 'https://www.oracle.com/');	
+
+	$('a').attr({
+		href: 'https://jquery.com/',
+		target: '_blank'
 	});
-	console.log($("a").eq(0).attr("href")); // /new/d.html
-	console.log($("a").eq(1).attr("href")); // /new/d.html
 	
-	$("a").attr({
-		rel: "nofollow",
-		href: function(idx, href){
-			return "/new" + href;
-		}
-	});
-	console.log($("a").eq(0).attr("href")); // /new/new/d.html
-	console.log($("a").eq(1).attr("href")); // /new/new/d.html
-	
-	$("a").removeAttr("href");
-	console.log($("a").eq(0).attr("href")); //undefined
-	console.log($("a").eq(1).attr("href")); //undefined
+	$('a').removeAttr('target');
 });
 </script>
 
-<a href='a.html'>A</a>
-<a href='b.html'>B</a>
+<a href='https://www.google.co.kr/'>구글</a>
+<a href='https://www.naver.com/'>네이버</a>
 
 <!-- 
 - .attr(attributeName): 

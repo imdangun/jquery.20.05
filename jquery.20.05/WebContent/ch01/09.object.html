@@ -1,0 +1,22 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	let $collection1 = $('div');
+	let $div1 = $('div').eq(0);
+	let div1 = $collection1.get(0);
+	
+	console.log($collection1, $div1, div1);
+	// k.fn.init(1) k.fn.init(1) <div></div>
+	
+	let $collection2 = $('div');
+	let $div2 = $collection2.eq(0);
+	let div2 = $collection2.get(0);
+	
+	console.log($collection1 === $collection2); // false
+	console.log($div1 === $div2); // false
+	console.log(div1 === div2);   // true
+});
+</script>
+
+<div></div>
