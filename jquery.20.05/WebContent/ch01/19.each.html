@@ -1,0 +1,41 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	$('li').each(function(i, e) {
+		console.log(i, e, this);
+	});
+	/*
+	0 <li id='a'~ <li id='a'~
+	1 <li id='b'~ <li id='b'~
+	2 <li id='b'~ <li id='b'~
+	*/
+	
+	$('li').each(function(i, e) {
+		console.log(i, $(e).text(), $(this).text());
+	});
+	/*
+	0 'Link1' 'Link1'
+	1 'Link2' 'Link3'
+	2 'Link3' 'Link3'
+	*/
+	
+	$('input').each(function(i, e) {
+		$(e).val($(e).val() + '%');
+	});
+	
+	$('input').val(function(i, v) {
+		return v + '%';
+	});
+});
+</script>
+
+<ul>
+	<li id='a'><a href='#'>Link1</a></li>
+	<li id='b'><a href='#'>Link2</a></li>
+	<li id='c'><a href='#'>Link3</a></li>
+</ul>
+
+<form>
+	<input type='text' value='hello'/>
+</form>
