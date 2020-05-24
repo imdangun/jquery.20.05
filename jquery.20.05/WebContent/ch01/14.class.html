@@ -2,13 +2,13 @@
 <script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
 <script>
 $(() => {
-	var h = $('h1');
+	var h1 = $('h1');
 	
-	h.addClass('blue');
-	h.removeClass('blue');
-	h.toggleClass('blue');	
+	h1.addClass('blue');
+	h1.removeClass('blue');
+	h1.toggleClass('blue');	
 
-	if(h.hasClass('blue'))
+	if(h1.hasClass('blue'))
 		console.log('blue'); // blue
 });
 </script>
@@ -21,3 +21,16 @@ $(() => {
 
 <h1>HELLO</h1>
 <h1>WORLD</h1>
+
+<!-- 
+- .addClass(className):
+  Adds the specified class(es) to each element in the set of matched elements.
+  
+- .removeClass([className]):
+  Remove a single class, multiple classes, or all classes 
+  from each element in the set of matched elements.
+
+- .toggleClass(className):
+  Add or remove one or more classes from each element 
+  in the set of matched elements.
+ -->
