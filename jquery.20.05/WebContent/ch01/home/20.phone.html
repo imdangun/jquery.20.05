@@ -11,14 +11,14 @@
 <script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
 <script>
 $(() => {	
-	let phone = $('input').val();
+	let phoneNum = $('input').val();
 	
-	let refinedPhone = '';
-	for(let char of phone)
+	let refinedPhoneNum = '';
+	for(let char of phoneNum)
 		if('0' <= char && char <= '9') 
-			refinedPhone += char;
+			refinedPhoneNum += char;
 	
-	$('input').val(refinedPhone);
+	$('input').val(refinedPhoneNum);
 });
 </script>
 
