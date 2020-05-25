@@ -1,0 +1,16 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	$('button').click(() => $('span').text('clicked.'));
+});
+</script>
+
+<button type='button'>confirm</button>
+<span></span>
+
+<!-- 
+- .click( handler ):
+  handler: Function( Event eventObject )
+  Bind an event handler to the "click" JavaScript event on an element.
+ -->

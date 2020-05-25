@@ -1,0 +1,30 @@
+<!-- 과제2:
+사용자가 입력한, 전화번호에서 숫자가 아닌 문자들을 제거하세요.
+전화번호를 입력하지 않은 경우, 에러 메세지를 출력하세요.
+
+다음처럼 전화번호 입력 필드가 있다.
+<input type='tel'/>
+
+form 제출을 생략한다.
+ --> 
+
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	$('button').click(() => {
+		let phoneNum = $('input').val();
+		
+		if(phoneNum) {
+			$('input').val(phoneNum.replace(/[^0-9]/g , ''));
+			$('span').text('');
+		} else $('span').text(' phone number is empty.');
+	});
+});
+</script>
+
+<form>
+	<input type='tel'/><span></span>
+	<br>
+	<button type='button'>confirm</button>
+</form>
