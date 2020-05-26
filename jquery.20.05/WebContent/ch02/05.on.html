@@ -1,0 +1,51 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	$('#wrapper').on({
+		mouseenter() {
+			$(this).removeClass().addClass('circle mouseenter');
+		},
+		mouseleave() {
+			$(this).removeClass().addClass('circle mouseleave');
+		}
+	}, '.circle');
+	
+	$('button').on('click', () => 
+		$('#wrapper').append($('.circle').eq(0).clone()));
+});
+</script>
+
+<style>
+#wrapper {
+	margin: 20px;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	border: 1px solid black;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}
+
+.mouseenter {
+	background: red;
+}
+
+.mouseleave {
+	background: '';
+}
+
+</style>
+
+<button type='button'>create</button>
+<div id='wrapper'>
+	<div class='circle'></div>
+	<div class='square'></div>
+</div>

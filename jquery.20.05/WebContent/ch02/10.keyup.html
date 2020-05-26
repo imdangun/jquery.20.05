@@ -1,0 +1,18 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	$('input').keyup(function() { 
+		$('p').text($(this).val())
+	})
+});
+</script>
+
+<input type='text'/>
+<p></p>
+
+<!-- 
+- .keyup( handler ):
+   Bind an event handler to the "keyup" JavaScript event, 
+   or trigger that event on an element.
+ -->

@@ -1,0 +1,37 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	$('button').click(() => {
+		$.ajax({
+			url: '01.data.json',
+			data: {id: 'yellow'},
+			type: 'get',
+			dataType: 'json',
+			success: (data, status, xhr) => {
+				$('<h3>').text(data.name).appendTo('body');
+				$('<p>').html(status).appendTo('body');
+				console.log(xhr);
+			},
+			error: (xhr, status, msg) => {
+				$('<p>').html(status + ']' + msg).appendTo('body');
+				console.log(xhr);
+			},
+			complete: (xhr, status) => {
+				$('<p>').html(status).appendTo('body');
+				console.log(xhr);
+			}
+		})
+	})
+});
+</script>
+
+<button type='button'>click</button>
+
+<!-- 
+- jQuery.ajax( [settings ] ):
+  settings(PlainObject): A set of key/value pairs that configure the Ajax request. 
+  		All settings are optional.
+  
+  https://api.jquery.com/jQuery.ajax/
+ -->

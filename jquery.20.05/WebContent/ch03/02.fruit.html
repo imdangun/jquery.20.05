@@ -1,0 +1,57 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+$(() => {
+	let table = $('tbody');
+	
+	$('button').click(() => {
+		$.ajax({
+			url: '02.data.json',
+			success: (data) => {
+				let fruits = data.fruits;
+				let fruit, col, val, tr, td;
+			
+				for(let row in fruits) {
+					fruit = fruits[row];
+					col = 0;
+					for(let key in fruit) {
+						val = fruit[key];
+						tr = table.find('tr').eq(row);
+						td = tr.find('td').eq(col++);
+						td.text(val);
+					}					
+				}
+			}
+		})
+	})
+});
+</script>
+
+<style>
+* {
+	margin: 20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid black;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+</style>
+
+<button type='button'>load</button>
+
+<table>
+	<thead>
+		<tr><th>이름</th><th>가격</th><th>기한</th><th>생산지</th></tr>
+	</thead>
+	<tbody>
+		<tr><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td></tr>
+	</tbody>
+</table>
