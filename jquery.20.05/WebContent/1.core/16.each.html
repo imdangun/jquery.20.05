@@ -25,6 +25,15 @@ $(() => {
 	name: adelia
 	age: 20
 	*/
+	
+	$.each([1, 2, 3, 4], (i, e) => {
+		if(e > 2) return;
+		console.log(e);
+	});
+	/*
+	1
+	2
+	*/
 });
 </script>
 
