@@ -1,0 +1,12 @@
+<meta charset='utf-8'>
+<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script>
+window.onerror = (msg, url, line, col, err) => {
+	document.write(`${msg}<br>`);
+	document.write(`at ${line}\n:${col} of ${url}`);
+	document.write('<hr>');
+	document.write(err);
+};
+
+a;
+</script>
