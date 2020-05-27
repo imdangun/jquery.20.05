@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>UMS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+header {
+	border: solid black 1px;
+	text-align: center;
+}
+
+form, table {
+	margin-top: 20px;
+}
+
+table, th {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h3>U M S</h3>
+		</header>
+
+		<form>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="사용자명">
+			</div>
+
+			<div class="btn-group btn-group-justified">
+				<a class="btn btn-default">
+					<span class="glyphicon glyphicon-list"></span> 목록
+				</a>
+				<a class="btn btn-default">
+					<span class="glyphicon glyphicon glyphicon-plus"></span> 추가
+				</a>
+				<a class="btn btn-default">
+					<span class="glyphicon glyphicon-asterisk"></span> 수정
+				</a>
+				<a class="btn btn-default">
+					<span class="glyphicon glyphicon-remove"></span> 삭제
+				</a>
+			</div>
+		</form>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>이름</th>
+					<th>등록일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="radio"/>&nbsp;&nbsp;&nbsp;1</td>
+					<td>최한석</td>
+					<td>2020-3-21</td>
+				</tr>
+				<tr>
+					<td><input type="radio"/>&nbsp;&nbsp;&nbsp;2</td>
+					<td>한아름</td>
+					<td>2020-3-22</td>
+				</tr>
+				<tr>
+					<td><input type="radio"/>&nbsp;&nbsp;&nbsp;3</td>
+					<td>양승일</td>
+					<td>2020-3-23</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
