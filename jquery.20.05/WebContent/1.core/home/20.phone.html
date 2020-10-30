@@ -8,7 +8,10 @@ $(() => {
 		if('0' <= char && char <= '9') 
 			refinedPhoneNum += char;
 	
-	$('input').val(refinedPhoneNum);
+	$('input').val(refinedPhoneNum);	
+	
+	//
+	$('input').val($('input').val().replace(/\-/g, ''));
 });
 </script>
 
