@@ -1,15 +1,15 @@
-<meta charset='utf-8'>
-<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='http://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
 <script>
 $(() => {
 	$('body').data('foo', 10);
 	$('body').data('bar', {isManual: true});
-	$('body').data({baz: [1, 2]});
+	$('body').data({baz: [1, 2], hoi: 'hello'});
 	
 	console.log($('body').data('foo')); // 10
+	console.log($('body').data('bar')); // {isManual: true}
 	
 	console.log($('body').data());
-	// {foo: 10, bar: {...}, baz: Array(2)}
+	// {foo: 10, bar: {…}, baz: Array(2), hoi: "hello"}
 });
 </script>
 

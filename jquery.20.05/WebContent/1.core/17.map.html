@@ -10,13 +10,12 @@ $(() => {
 	
 	let obj = $('li').map((i, e) => e.id);
 	console.log(obj); // k.nf.init(3)
-	console.log(obj.get().join()); // Link1,Link2,Link3
-	
-	
+	console.log(obj.get()); // (3) ["a", "b", "c"]
+	console.log(obj.get().join()); // a,b,c
+		
 	//
 	obj = $.map({name: 'adelia', age: 20}, (v, k) => v);
-	console.log(obj); // ['adelia', 20]
-	
+	console.log(obj); // ['adelia', 20]	
 });
 </script>
 

@@ -1,14 +1,15 @@
-<meta charset='utf-8'>
-<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<meta charset='utf-8'/>
+<script src='http://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
 <script>
 $(() => {
-	let greet = $(':text');
+	let greet = $(':text');	
 	console.log('|' + greet.val() + '|'); // | hello |
 	
-	greet.val(greet.val().trim());
-	console.log('|' + greet.val() + '|');; // |hello|
+	greet.val(greet.val().trim()); // hello 가 폼에 입력된다.
 	
-	greet.val((i, v) => `${v} world`);
+	console.log(greet);	// collection{0: input}
+	greet.val((i, v) => `${v} world`); // hello world 폼에 입력된다.
+	console.log(greet.val()); // hello world
 	
 	//
 	$(':checked').each((i, e) => console.log($(e).val()));
