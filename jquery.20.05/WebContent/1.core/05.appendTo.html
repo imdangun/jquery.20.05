@@ -1,7 +1,9 @@
-<meta charset='utf-8'>
-<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='http://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
 <script>
-$(() => $('div').appendTo('hr'));
+$(() => {
+	$('div').appendTo('hr');
+	//$('hr').append($('div'));
+});
 </script>
 <style>
 div {

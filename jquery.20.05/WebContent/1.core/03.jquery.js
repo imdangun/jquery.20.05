@@ -40,18 +40,49 @@ $('div:gt(1)') // greater than
 
 $('div:animated')
 
-$('a[rel$="thinger"]')  // <a rel='do-nothinger'></a>
-
-//
-if($('div.foo')) {}
-if($('div.foo').length) {}
+$('a[rel$="thinger"]')
+/*
+<a rel='do-nothinger'></a>
+<a rel='so-thinger'></a>
+*/
 
 
 /** filtering **/
 $('div.foo').has('p')
+/*
+<div class='foo'> --
+	<p></p>
+</div>
+<div class='foo'></div>
+*/
+
 $('ul li').filter('.current')
+/*
+<ul>
+	<li class='current'></li> --
+	<li></li>
+</ul>
+*/
+
 $('ul li').not('.current')
-$('ul li').eq(5)
+/*
+<ul>
+	<li class='current'></li>
+	<li></li> --
+</ul>
+*/
+
+$('ul li').eq(1)
+/*
+<ul>
+	<li class='current'></li>
+	<li></li> --
+</ul>
+*/
+
+//
+if($('div.foo')) {}
+if($('div.foo').length) {}
 
 
 /** form **/

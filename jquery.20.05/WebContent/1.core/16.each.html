@@ -1,5 +1,4 @@
-<meta charset='utf-8'>
-<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='http://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
 <script>
 $(() => {	
 	$('li').each((i, e) => console.log(i, e.id));
@@ -9,9 +8,17 @@ $(() => {
 	2 'c'
 	*/
 	
+	jQuery.each([1, 2, 3, 4], (i, e) => {
+		if(e > 2) return;
+		console.log(e);
+	});
+	/*
+	1
+	2
+	*/	
 	
-	//	
-	jQuery.each($('li').toArray(), 
+	
+	$.each($('li').toArray(), 
 			(i, e) => console.log(i, e.id));
 	/*
 	0 'a'
@@ -19,20 +26,12 @@ $(() => {
 	2 'c'
 	*/
 	
+	//
 	$.each({name: 'adelia', age: 20},
 			(k, v) => console.log(k + ': ' + v));
 	/*
 	name: adelia
 	age: 20
-	*/
-	
-	$.each([1, 2, 3, 4], (i, e) => {
-		if(e > 2) return;
-		console.log(e);
-	});
-	/*
-	1
-	2
 	*/
 });
 </script>
