@@ -1,18 +1,17 @@
-<meta charset='utf-8'>
-<script src='http://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
 <script>
 $(() => {
 	$('button').click('hello', (e) => {
 		let userName = $('input').val();
 		if(userName == e.data) $('span').text(` correct: ${e.data}`);
-		else $('span').text(' incorrect').show().fadeOut(1000);
+		else $('span').text(' incorrect');
 	});
 });
 </script>
 
 <form>
 	<input type='text'/><span></span> <br>
-	<button type='button'>확인</button>
+	<button type='button'>OK</button>
 </form>
 
 <!-- 
