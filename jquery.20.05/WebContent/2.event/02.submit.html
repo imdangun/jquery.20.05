@@ -3,7 +3,8 @@
 $(() => {
 	$('button').click(() => {
 		if($('input').val()) $('form').submit();
-		else $('span').text('user name is empty.');
+		//else $('span').html('user name is empty.')
+		else $('span').html('<mark> user name is empty.</mark>')
 	});
 });
 </script>
